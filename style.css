@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: Fraunces, sans-serif;
+  --Dark_cyan: hsl(158, 36%, 37%);
+  --Dark_cyan-support: hsl(156, 42%, 18%);
+  --Cream: hsl(30, 38%, 92%);
+  --Dark_blue: hsl(212, 21%, 14%);
+  --Grayish_blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--Cream);
+  height: 100vh;
+  width: 100%;
+  padding: 2.75rem;
+  display: grid;
+  gap: 2rem;
+  align-items: baseline;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.card {
+  background: var(--White);
+  max-width: 32rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+  border-radius: 5%;
+}
+
+.img-container {
+  border-radius: 5% 5% 0 0;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.text-container {
+  padding: 0 1.5rem 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.heading {
+  color: var(--Dark_blue);
+  font-size: 2.7rem;
+  line-height: 2.8rem;
+  font-weight: 700;
+}
+
+.disc,
+.sub-heading {
+  color: var(--Grayish_blue);
+  font-size: 1.15rem;
+  line-height: 2rem;
+  font-family: Montserrat;
+  font-weight: 500;
+}
+
+.sub-heading {
+  font-size: 1.5rem;
+}
+
+.price-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.price-section li {
+  font-size: 2.5rem;
+  color: var(--Dark_cyan);
+}
+
+.price-section li:last-child {
+  font-size: 1.2rem;
+  padding-top: .1rem;
+  color: var(--Grayish_blue);
+  text-decoration: line-through;
+}
+
+.button {
+  font-size: 1.2rem;
+  font-family: Montserrat;
+  font-weight: 500;
+  background: var(--Dark_cyan);
+  color: var(--White);
+  text-decoration: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 4rem;
+  gap: .5rem;
+  transition: background-color ease .3s;
+}
+
+.button:hover {
+  background: var(--Dark_cyan-support);
+}
+
+.button img {
+  height: 35%;
+}
+
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width:375px) {
+  .card {
+    width: 85%;
+  }
+}
+
+@media (min-width:650px) {
+  .card {
+    grid-template-columns: 1fr 1fr;
+    max-width: 60rem;
+    border-radius: 10px;
+    gap: .5rem;
+  }
+
+  .img-container {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .text-container {
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+  }
+
+  .heading {
+    font-size: 3.1rem;
+    line-height: 3.2rem;
+  }
+
+  .disc {
+    color: var(--Grayish_blue);
+    font-size: 1.3rem;
+  }
+
+  .button {
+    line-height: 4.5rem;
+  }
+
+  .attribution {
+    font-size: 1.6rem;
+  }
+}
